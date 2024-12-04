@@ -1,6 +1,7 @@
 <header>
 
 # Hello GitHub Actions
+:smile:
 
 _Create and run a GitHub Actions workflow._
 
