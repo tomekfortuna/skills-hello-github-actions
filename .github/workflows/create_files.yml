@@ -1,0 +1,16 @@
+name: Create include files on commit
+run-name: ${{ github.actor }} is testing Github Actions
+on: [push]
+jobs:
+  Just-Echo-Message:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Environment:"
+      # - run: echo "  Event:        ${{ github.event_name }}"
+      - run: echo "  Runner OS:    ${{ runner.os }}"
+      - run: echo "  Branch:       ${{ github.ref }}"
+      - run: echo "  Repository:   ${{ github.repository }}"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "This job's status is ${{ job.status }}"
